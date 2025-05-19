@@ -2,8 +2,11 @@
 **How to run your application on the kubernates**
 
 Step1: First you have to run the container with the help of docker for that you can use the **dockerfile** which is presnt in this repository 
+
 Step2: follow this blog for next steps https://dev.to/nandkishor/how-to-run-the-container-with-the-help-of-docker--17p
+
 Step3: I hope with the help of step2 you are able to run the continer with the help of docker.
+
 Step3: use the **deployment.yaml** file to run the deployment now follow the below steps one by one to run the deployment
  a. kubectl apply -f deployment.yaml ( to apply the deployment changes)
  b. kubectl get deployments ( check the deployment is running or not)
@@ -12,6 +15,7 @@ Step3: use the **deployment.yaml** file to run the deployment now follow the bel
 Step4: use **service.yaml** file to run the services now on K8s
  a. kubectl apply -f service.yaml ( to apply the deployment changes)
  b. kubectl get services ( check the service is created or not)
+ 
 Step5: use the ingress.yaml file to use the ingress in your K8s as a load balancer.
  a. kubectl apply -f ingress.yaml ( to apply the ingress change)
  b. kubectl get ingress ( to check the ingress is deployed as a pod or not)
