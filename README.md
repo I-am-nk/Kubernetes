@@ -8,7 +8,7 @@ Step2: follow this blog for next steps https://dev.to/nandkishor/how-to-run-the-
 Step3: I hope with the help of step2 you are able to run the continer with the help of docker.
 
 Step3: use the **deployment.yaml** file to run the deployment now follow the below steps one by one to run the deployment
- a. '''kubectl apply -f deployment.yaml''' ( to apply the deployment changes)
+ a. kubectl apply -f deployment.yaml ( to apply the deployment changes)
  b. kubectl get deployments ( check the deployment is running or not)
  c. kubect get all ( to check all the resources which is running on K8s like pods, services, deployment, replica sets and ingress
 
