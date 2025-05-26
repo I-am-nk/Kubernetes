@@ -79,48 +79,88 @@ Your application is now successfully running on Kubernetes!
 
  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Below are the most commenly use commands of K8s:
 
-1️⃣ Check Cluster & Nodes
+# 📘 Most Commonly Used Kubernetes (K8s) Commands
 
-kubectl cluster-info                                   # Show cluster info
-kubectl get nodes                                      # List all nodes  
-kubectl describe node <node-name>    # Describe a specific node
+A quick reference guide for daily Kubernetes operations.
 
-2️⃣ Pod Operations
-kubectl get pods                                                    # List all pods
-kubectl get pods -o wide                                     # List pods with more details (IP, Node, etc.)
-kubectl describe pod <pod-name>                   # Detailed info of a pod
-kubectl logs <pod-name>                                   # View pod logs
-kubectl exec -it <pod-name> -- /bin/bash      # Access pod shell (if available)
-kubectl delete pod <pod-name>                      # Delete a pod
+---
 
-3️⃣ Deployment Operations
-kubectl create deployment <name> --image=<image>    # Create deployment
-kubectl get deployments                                                        # List deployments
-kubectl describe deployment <name>                                # Details of deployment
-kubectl scale deployment <name> --replicas=3                # Scale pods
-kubectl rollout restart deployment <name>                     # Restart deployment
-kubectl delete deployment <name>                                   # Delete deployment
+## 1️⃣ Check Cluster & Nodes
 
-4️⃣ Service Operations
-kubectl expose deployment <name> --type=NodePort --port=80   # Expose deployment via NodePort
-kubectl get svc                                                                                            # List services
-kubectl delete svc <service-name>                                                        # Delete service
+```bash
+kubectl cluster-info                     # Show cluster info
+kubectl get nodes                        # List all nodes  
+kubectl describe node <node-name>       # Describe a specific node
+```
 
-5️⃣ Config with YAML Files
-kubectl apply -f <file.yaml>                # Create/update resource from YAML
-kubectl get all                                       # List all resources (pods, svc, deployments, etc.)
-kubectl delete -f <file.yaml>              # Delete resource from YAML
+---
 
-6️⃣ Namespace Operations (Optional)
-kubectl get namespaces                          # List namespaces
-kubectl create namespace <name>      # Create new namespace
-kubectl delete namespace <name>     # Delete namespace
+## 2️⃣ Pod Operations
 
-🔹 Pro Tip: Useful Minikube Commands
-minikube start                                                             # Start Minikube cluster
-minikube stop                                                             # Stop Minikube cluster
-minikube status                                                          # Check Minikube status
-minikube service <service-name>                          # Access service URL in Minikube
-![image](https://github.com/user-attachments/assets/a809a8a2-3555-4408-8e17-735effad1a81)
+```bash
+kubectl get pods                                      # List all pods
+kubectl get pods -o wide                             # List pods with details (IP, Node, etc.)
+kubectl describe pod <pod-name>                      # Detailed info of a pod
+kubectl logs <pod-name>                              # View pod logs
+kubectl exec -it <pod-name> -- /bin/bash             # Access pod shell
+kubectl delete pod <pod-name>                        # Delete a pod
+```
+
+---
+
+## 3️⃣ Deployment Operations
+
+```bash
+kubectl create deployment <name> --image=<image>      # Create a deployment
+kubectl get deployments                               # List deployments
+kubectl describe deployment <name>                    # Describe a deployment
+kubectl scale deployment <name> --replicas=3          # Scale deployment
+kubectl rollout restart deployment <name>             # Restart deployment
+kubectl delete deployment <name>                      # Delete deployment
+```
+
+---
+
+## 4️⃣ Service Operations
+
+```bash
+kubectl expose deployment <name> --type=NodePort --port=80   # Expose deployment
+kubectl get svc                                               # List services
+kubectl delete svc <service-name>                             # Delete a service
+```
+
+---
+
+## 5️⃣ Work with YAML Files
+
+```bash
+kubectl apply -f <file.yaml>         # Apply configuration
+kubectl get all                      # List all resources (pods, svc, deployments, etc.)
+kubectl delete -f <file.yaml>        # Delete resources from YAML
+```
+
+---
+
+## 6️⃣ Namespace Operations (Optional)
+
+```bash
+kubectl get namespaces               # List namespaces
+kubectl create namespace <name>     # Create a new namespace
+kubectl delete namespace <name>     # Delete a namespace
+```
+
+---
+
+## 🔹 Pro Tip: Minikube Commands
+
+```bash
+minikube start                                # Start Minikube cluster
+minikube stop                                 # Stop Minikube cluster
+minikube status                               # Check Minikube status
+minikube service <service-name>              # Get service URL
+```
+
+---
+✅ Keep this cheat sheet handy during interviews or hands-on practice!
+
