@@ -162,5 +162,5 @@ minikube service <service-name>              # Get service URL
 ```
 
 ---
-✅ Keep this cheat sheet handy during interviews or hands-on practice!
+
 
