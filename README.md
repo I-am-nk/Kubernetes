@@ -1,27 +1,81 @@
-# Kubernetes
-**How to run your application on the kubernates**
 
-Step1: First you have to run the container with the help of docker for that you can use the **dockerfile** which is presnt in this repository 
+# 🚀 How to Run Your Application on Kubernetes
 
-Step2: follow this blog for next steps https://dev.to/nandkishor/how-to-run-the-container-with-the-help-of-docker--17p
+This guide will help you run your application on a Kubernetes cluster using deployment, service, and ingress resources.
 
-Step3: I hope with the help of step2 you are able to run the continer with the help of docker.
+---
 
-Step3: use the **deployment.yaml** file to run the deployment now follow the below steps one by one to run the deployment
- a. kubectl apply -f deployment.yaml ( to apply the deployment changes)
- b. kubectl get deployments ( check the deployment is running or not)
- c. kubect get all ( to check all the resources which is running on K8s like pods, services, deployment, replica sets and ingress
+## 🧱 Step 1: Run the Application with Docker
 
-Step4: use **service.yaml** file to run the services now on K8s
- a. kubectl apply -f service.yaml ( to apply the deployment changes)
- b. kubectl get services ( check the service is created or not)
- 
-Step5: use the ingress.yaml file to use the ingress in your K8s as a load balancer.
- a. kubectl apply -f ingress.yaml ( to apply the ingress change)
- b. kubectl get ingress ( to check the ingress is deployed as a pod or not)
- c. minikube addons enable ingress (If you are using minikube for running you app into the K8s then run this command so it can download ingress controller )
+Use the `Dockerfile` present in this repository to build and run your container locally using Docker.
 
-Congratulation you are running your app on the kubernetes.
+---
+
+## 🔗 Step 2: Follow the Docker Setup Blog
+
+Detailed steps are available here:
+
+🔗 [How to run the container with the help of Docker](https://dev.to/nandkishor/how-to-run-the-container-with-the-help-of-docker--17p)
+
+---
+
+## ✅ Step 3: Verify Docker Container is Running
+
+Ensure the Docker container is running successfully by following the blog. If it is, proceed to Kubernetes steps.
+
+---
+
+## 📦 Step 4: Deploy to Kubernetes Using `deployment.yaml`
+
+Apply the deployment configuration using the following commands:
+
+```bash
+kubectl apply -f deployment.yaml
+kubectl get deployments
+kubectl get all
+```
+
+- `kubectl apply -f deployment.yaml`: Apply the deployment.
+- `kubectl get deployments`: Check if the deployment is running.
+- `kubectl get all`: View all resources like Pods, Services, Deployments, ReplicaSets, etc.
+
+---
+
+## 🌐 Step 5: Expose Application Using `service.yaml`
+
+Apply the service configuration with:
+
+```bash
+kubectl apply -f service.yaml
+kubectl get services
+```
+
+- `kubectl apply -f service.yaml`: Create the service.
+- `kubectl get services`: Verify the service is active.
+
+---
+
+## 🛡️ Step 6: Setup Ingress Using `ingress.yaml`
+
+Deploy the ingress configuration to route external traffic:
+
+```bash
+kubectl apply -f ingress.yaml
+kubectl get ingress
+```
+
+If you're using **Minikube**, enable the ingress controller:
+
+```bash
+minikube addons enable ingress
+```
+
+---
+
+## 🎉 Congratulations!
+
+Your application is now successfully running on Kubernetes!
+
 
  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
